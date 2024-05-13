@@ -222,7 +222,7 @@ export default function Component() {
                 <ChevronRight className="h-4 w-4 translate-x-0 transform transition-all duration-300 ease-out group-hover:translate-x-1" />
               </Link>
               <Link
-                href="mailto:hello@example.com"
+                href="mailto:contact@parthsinhac.com"
                 target="_blank"
                 className={cn(
                   buttonVariants({
