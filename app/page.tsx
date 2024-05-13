@@ -21,17 +21,17 @@ import {
 import Link from "next/link";
 
 const contact = {
-  email: "hello@example.com",
-  tel: "+123456789",
+  email: "contact@parthsinha.com",
+  tel: "+4407306179724",
   social: [
     {
       name: "GitHub",
-      url: "https://github.com/",
+      url: "https://github.com/sinhaparth5",
       icon: GitHubLogoIcon,
     },
     {
       name: "LinkedIn",
-      url: "https://www.linkedin.com/",
+      url: "https://www.linkedin.com/in/parth-sinha18/",
       icon: (props: React.SVGProps<SVGSVGElement>) => (
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" {...props}>
           <title>LinkedIn</title>
@@ -44,7 +44,7 @@ const contact = {
     },
     {
       name: "X",
-      url: "https://x.com/",
+      url: "https://x.com/sinhaparth555",
       icon: (props: React.SVGProps<SVGSVGElement>) => (
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" {...props}>
           <title>X</title>
@@ -183,10 +183,10 @@ export default function Component() {
           <div className="flex flex-col justify-center space-y-4">
             <div className="space-y-2">
               <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-                Hi, I&apos;m John Doe 👋
+                Hi, I&apos;m Parth Sinha 👋
               </h1>
               <span className="max-w-[600px] md:text-xl">
-                I&apos;m a passionate software engineer with an interest in{" "}
+                I&apos;m a passionate developer with an interest in{" "}
                 <WordRotate
                   className="inline-flex w-full text-left font-bold leading-none tracking-tighter"
                   words={[
