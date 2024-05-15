@@ -13,7 +13,7 @@ spec:
   template:
     metadata:
       labels:
-        {{- include "parth-port-helm.selectorLabels".  | nindent 8 }}
+        {{- include "parth-port-helm.selectorLabels" . | nindent 8 }}
     spec:
       containers:
         - name: {{ .Chart.Name }}
