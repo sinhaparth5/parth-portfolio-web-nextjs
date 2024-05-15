@@ -1,15 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: parth-port-helm
+  name: parth-port-kube
   namespace: argocd
-
 spec:
   project: default
   source:
     repoURL: 'https://github.com/sinhaparth5/parth-portfolio-web-nextjs.git'
     targetRevision: HEAD
-    path: parth-port-helm
+    path: k8s
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: default
