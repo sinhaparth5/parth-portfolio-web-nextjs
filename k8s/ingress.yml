@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: parth-prod-ingress
+
+spec:
+  rules:
+    - host: kube.pksinha.co.uk
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: parth-prod-k8s
+                port:
+                  number: 80
