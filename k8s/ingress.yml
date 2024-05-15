@@ -12,6 +12,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: parth-prod-k8s
+                name: parth-port-k8s  # Updated service name
                 port:
                   number: 80
