@@ -1,21 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: parth-port-k8s
-
+  name: parth-nextjs-app
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: parth-port-k8s
+      app: parth-nextjs-app
   template:
     metadata:
       labels:
-        app: parth-port-k8s
+        app: parth-nextjs-app
     spec:
       containers:
-        - name: parth-port-k8s
-          image: parthsinha18/parth-port-k8s
+        - name: parth-nextjs-app
+          image: parthsinha18/parth-port-k8s:latest
           ports:
             - containerPort: 3000
-
