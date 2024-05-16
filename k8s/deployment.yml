@@ -16,5 +16,12 @@ spec:
       containers:
         - name: parth-nextjs-app
           image: parthsinha18/parth-port-k8s:latest
+          resources:
+            requests:
+              cpu: "250m"  # Initial baseline request
+              memory: "256Mi"
+            limits:
+              cpu: "500m"  # Limit to prevent overconsumption
+              memory: "512Mi
           ports:
             - containerPort: 3000
