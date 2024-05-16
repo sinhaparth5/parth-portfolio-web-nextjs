@@ -19,3 +19,4 @@ jobs:
     - name: Update Helm Values
       run: |
         sed -i "s/kind: .*/kind: \"${SHORT_SHA}\"/" k8s/deployment.yml
+        cat k8s/deployment.yml
