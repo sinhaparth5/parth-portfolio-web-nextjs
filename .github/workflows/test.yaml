@@ -18,5 +18,5 @@ jobs:
         export SHORT_SHA=$(echo "${GITHUB_SHA}" | cut -c1-7)
     - name: Update Helm Values
       run: |
-        sed -i "s/kind: .*/kind: \"${SHORT_SHA}\"/" k8s/deployment.yml
+        sed -i "s/\(kind: \).*/\1\"${SHORT_SHA}\"/" k8s/deployment.yml
         cat k8s/deployment.yml
