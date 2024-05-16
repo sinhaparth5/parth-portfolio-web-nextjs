@@ -2,8 +2,8 @@ name: Update Helm Values
 
 on:
   push:
-    paths:
-      - '*/Dockerfile'
+    branches:
+      - main
 
 jobs:
   update-helm-values:
