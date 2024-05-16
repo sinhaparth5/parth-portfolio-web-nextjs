@@ -12,6 +12,7 @@ spec:
       labels:
         app: parth-nextjs-app
     spec:
+      automountServiceAccountToken: false
       containers:
         - name: parth-nextjs-app
           image: parthsinha18/parth-port-k8s:latest
