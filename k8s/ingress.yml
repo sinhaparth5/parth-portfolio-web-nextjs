@@ -1,0 +1,16 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: parth-nextjs-ingress
+spec:
+  rules:
+    - host: kube.pksinha.co.uk
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: parth-nextjs-service
+                port:
+                  number: 80

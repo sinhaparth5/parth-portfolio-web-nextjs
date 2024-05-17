@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: parth-nextjs-app
-          image: parthsinha18/parth-port-k8s:latest
+          image: parthsinha18/parth-port-k8s
           resources:
             requests:
               cpu: "250m"
