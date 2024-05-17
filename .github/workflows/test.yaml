@@ -19,12 +19,8 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
-      - name: Docker Tag short SHA
+      - name: Build & Push Docker Image
         run: |
           SHORT_SHA=$(git rev-parse --short ${{ github.sha }})
-
-      - name: Build Docker image
-        run: docker build -t ${{ secrets.DOCKER_USERNAME }}/parth-port-k8s:$SHORT_SHA .
-
-      - name: Push Docker image
-        run: docker push ${{ secrets.DOCKER_USERNAME }}/parth-port-k8s:$SHORT_SHA
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/parth-port-k8s:$SHORT_SHA .
+          docker push ${{ secrets.DOCKER_USERNAME }}/parth-port-k8s:$SHORT_SHA
