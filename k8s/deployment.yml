@@ -15,7 +15,7 @@ spec:
       automountServiceAccountToken: false
       containers:
         - name: parth-nextjs-app
-          image: parthsinha18/parth-port-k8s
+          image: parthsinha18/parth-port-k8s:latest
           resources:
             requests:
               cpu: "250m"
