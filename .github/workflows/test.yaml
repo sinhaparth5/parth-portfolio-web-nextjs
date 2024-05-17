@@ -33,11 +33,4 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Insatall Civo CLI
-        uses: civo/action-civo
-        with:
-          token: ${{ secrets.CIVO_API_KEY }}
-
-      - name: Deploy to Civo cluster
-        run: |
-          civo kubernetes apply -f k8s/ --cluster ${{ secrets.CIVO_CLUSTER }}
+      
