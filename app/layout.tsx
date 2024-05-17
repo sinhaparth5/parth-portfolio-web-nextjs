@@ -11,7 +11,7 @@ const fontSans = FontSans({
 });
 
 export const metadata: Metadata = {
-  title: "Developer Portfolio",
+  title: "P4rth Sinha",
   description: "My developer portfolio",
 };
 
