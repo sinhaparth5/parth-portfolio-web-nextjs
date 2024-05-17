@@ -4,7 +4,7 @@ metadata:
   name: parth-nextjs-ingress
 spec:
   rules:
-    - host:  kube.pksinha.co.uk
+    - host: kube.pksinha.co.uk
       http:
         paths:
           - path: /  
