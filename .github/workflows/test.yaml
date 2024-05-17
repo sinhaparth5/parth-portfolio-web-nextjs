@@ -35,8 +35,9 @@ jobs:
 
       - name: GitHub Action for Civo - civo
         run: |
-          curl -sL https://civo.com/get | sh
-          civo login --api-key ${{ secrets.CIVO_API_KEY }}
-          civo kubernetes apply -f k8s/ --cluster ${{ secrets.CIVO_CLUSTER }}
+          curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/arm64/kubectl"
+          curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/arm64/kubectl.sha256"
+          echo "$(cat kubectl.sha256)  kubectl" | sha256sum --check
+          export KUBECONFIG=${{ secrets.KUBECONFIG }}
           
           
