@@ -33,9 +33,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Insatall Civo CLI
-        uses: civo/action-civo
+      - name: GitHub Action for Civo - civo
+        uses: civo/action-civo@v1.0.1
         with:
           token: ${{ secrets.CIVO_API_KEY }}
 
-      
