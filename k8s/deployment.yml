@@ -12,16 +12,15 @@ spec:
       labels:
         app: parth-nextjs-app
     spec:
-      automountServiceAccountToken: false
       containers:
         - name: parth-nextjs-app
           image: parthsinha18/parth-port-k8s:latest
           resources:
             requests:
-              cpu: "250m"  # Initial baseline request
+              cpu: "250m"
               memory: "256Mi"
             limits:
-              cpu: "500m"  # Limit to prevent overconsumption
+              cpu: "500m"
               memory: "512Mi"
           ports:
             - containerPort: 3000
