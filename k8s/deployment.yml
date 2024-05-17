@@ -22,6 +22,6 @@ spec:
               memory: "256Mi"
             limits:
               cpu: "500m"  # Limit to prevent overconsumption
-              memory: "512Mi
+              memory: "512Mi"
           ports:
             - containerPort: 3000
