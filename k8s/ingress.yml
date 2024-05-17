@@ -4,10 +4,10 @@ metadata:
   name: parth-nextjs-ingress
 spec:
   rules:
-    - host:  kube.pksinha.co.uk # Replace with your actual domain
+    - host:  kube.pksinha.co.uk
       http:
         paths:
-          - path: /  # Matches all paths
+          - path: /  
             pathType: Prefix
             backend:
               service:
