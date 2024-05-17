@@ -21,7 +21,7 @@ metadata:
   name: kube-ingress
 spec:
   rules:
-  - host: pksinha.co.uk
+  - host: kube.pksinha.co.uk
     http:
       paths:
       - pathType: Prefix
