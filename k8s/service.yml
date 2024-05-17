@@ -7,6 +7,6 @@ spec:
     app: parth-nextjs-app
   ports:
     - protocol: TCP
-      port: 80  # External port for access (can be changed)
-      targetPort: 3000  # Port exposed by the container
-  type: NodePort  # Adjust type based on your needs (e.g. NodePort)
+      port: 80
+      targetPort: 3000 
+  type: NodePort
