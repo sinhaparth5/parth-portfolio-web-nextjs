@@ -19,6 +19,7 @@ import {
   Youtube,
 } from "lucide-react";
 import Link from "next/link";
+import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
 
 const contact = {
   email: "contact@parthsinha.com",
