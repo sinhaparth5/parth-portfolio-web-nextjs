@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react"
+import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -24,12 +25,16 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased",
+          "min-h-screen font-sans antialiased",
           fontSans.variable
         )}
       >
-        <TooltipProvider>{children}</TooltipProvider>
-        <Analytics />
+        <BackgroundGradientAnimation>
+          <div className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl">
+            <TooltipProvider>{children}</TooltipProvider>
+            <Analytics />
+          </div>
+        </BackgroundGradientAnimation>
       </body>
     </html>
   );
